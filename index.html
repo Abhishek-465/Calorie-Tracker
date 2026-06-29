@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta
+name="viewport"
+content="width=device-width, initial-scale=1.0"
+/>
+<title>Calorie Tracker</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+body{
+    background:#f4f7fc;
+    padding:20px;
+    color:#222;
+}
+
+.container{
+    max-width:500px;
+    margin:auto;
+}
+
+.card{
+    background:white;
+    border-radius:20px;
+    padding:20px;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1{
+    text-align:center;
+    margin-bottom:20px;
+    color:#1f2937;
+}
+
+h2{
+    margin-bottom:15px;
+    color:#374151;
+    font-size:20px;
+}
+
+input,select,button{
+    width:100%;
+    padding:14px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    margin-bottom:12px;
+    font-size:16px;
+}
+
+button{
+    background:#2563eb;
+    color:white;
+    border:none;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#1d4ed8;
+}
+
+.stats{
+    display:flex;
+    justify-content:space-between;
+    gap:10px;
+    margin-top:15px;
+}
+
+.box{
+    flex:1;
+    background:#f9fafb;
+    padding:15px;
+    border-radius:15px;
+    text-align:center;
+}
+
+.box h3{
+    font-size:14px;
+    color:#666;
+}
+
+.box p{
+    font-size:22px;
+    font-weight:bold;
+    margin-top:8px;
+}
+
+.history-item{
+    padding:10px;
+    border-bottom:1px solid #eee;
+}
+
+.food-list{
+    max-height:200px;
+    overflow:auto;
+}
+
+@media(max-width:500px){
+
+.stats{
+    flex-direction:column;
+}
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Hello Tulina </h1>
+
+<div class="card">
+<h2>Your Details</h2>
+
+<input type="number" id="age" placeholder="Age">
+<input type="number" id="weight" placeholder="Weight (kg)">
+<input type="number" id="height" placeholder="Height (cm)">
+
+<button onclick="saveProfile()">
+Save Details
+</button>
+
+<div class="stats">
+<div class="box">
+<h3>Healthy Calories</h3>
+<p id="healthyCal">0</p>
+</div>
+
+<div class="box">
+<h3>Today's Intake</h3>
+<p id="todayCal">0</p>
+</div>
+</div>
+
+</div>
+
+<div class="card">
+
+<h2>Add Food</h2>
+
+<input
+list="foods"
+id="foodSearch"
+placeholder="Search food..."
+>
+
+<datalist id="foods"></datalist>
+
+<input
+type="number"
+id="quantity"
+placeholder="Quantity"
+value="1"
+min="1"
+>
+
+<button onclick="addFood()">
+Add Calories
+</button>
+
+</div>
+<div class="card">
+    <h2>Today's Foods</h2>
+    <div id="todayFoods"></div>
+</div>
+
+<div class="card">
+
+<h2>Last 7 Days</h2>
+
+<div id="history"></div>
+
+</div>
+<p id="healthyCal"></p>
+<p id="todayCal"></p>
+<p id="remainingCal"></p>
+
+<div class="progress">
+    <div
+        id="progressFill"
+        class="progress-fill">
+    </div>
+</div>
+
+<canvas id="calorieChart"></canvas>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
