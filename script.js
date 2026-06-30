@@ -5,6 +5,7 @@ const foods = {
     "Aloo Chop": 100,
     "Almond (piece wise)": 7,
     "Beguni": 60,
+    "Black Coffee": 4,    
     "Black Jamun 100g": 60,
     "Chanachur (cup wise)": 170,
     "Chicken 100g": 183,
