@@ -17,6 +17,7 @@ const foods = {
     "Dahi with Seed Mix": 83,
     "Egg": 75,
     "Fish Fry": 180,
+    "Ghugni":190,
     "Herbal Protein Shake": 94,
     "Katla Fish 100g": 130,
     "Liquor Tea 1 Cup": 3,
