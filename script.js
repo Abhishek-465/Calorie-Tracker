@@ -18,6 +18,7 @@ const foods = {
     "Egg": 75,
     "Fish Fry": 180,
     "Ghugni":190,
+    "Guava 100g": 68,
     "Herbal Protein Shake": 94,
     "Katla Fish 100g": 130,
     "Liquor Tea 1 Cup": 3,
