@@ -29,6 +29,7 @@ const foods = {
     "Moong Dalia (1 cup)": 135,
     "Mutton 100g": 275,
     "Mutton Liver 100g": 180,
+    "Pantua":150,
     "Papaya 100g": 43,
     "Pomfret Fish 100g": 120,
     "Pomegranate 100g": 83,
